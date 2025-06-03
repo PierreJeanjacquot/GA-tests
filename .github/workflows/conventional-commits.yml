@@ -1,0 +1,14 @@
+name: Lint PR Title
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - reopened
+
+jobs:
+  lint-pr-title:
+    uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/conventional-commits.yml@fix/cc/remove-reserved
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
