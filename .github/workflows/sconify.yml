@@ -20,12 +20,12 @@ jobs:
       image-name: ${{inputs.image-name}}
       image-tag: ${{inputs.image-tag}}
       debug-only: ${{inputs.debug-only}}
-      docker-registry: docker.io
-      sconify-version: 5.9.0-v15
-      fs-dir: /app
-      binary: /usr/local/bin/node
+      docker-registry: "docker.io"
+      sconify-version: "5.9.0-v15"
+      fs-dir: "/app"
+      binary: "/usr/local/bin/node"
       command: "node /app/src/app.js"
-      heap: 1G
+      heap: "1G"
       dlopen: 1
     secrets:
       docker-username: ${{ secrets.DOCKER_USERNAME }}
