@@ -9,7 +9,10 @@ on:
       image-tag:
         required: true
         type: string
-      debug-only:
+      sconify-debug:
+        type: boolean
+        default: true
+      sconify-prod:
         type: boolean
         default: true
 
@@ -17,15 +20,16 @@ jobs:
   sconify:
     uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/sconify.yml@feat/sconify
     with:
-      image-name: ${{inputs.image-name}}
-      image-tag: ${{inputs.image-tag}}
-      debug-only: ${{inputs.debug-only}}
-      docker-registry: "docker.io"
-      sconify-version: "5.9.0-v15"
-      fs-dir: "/app"
-      binary: "/usr/local/bin/node"
-      command: "node /app/src/app.js"
-      heap: "1G"
+      image-name: ${{ inputs.image-name }}
+      image-tag: ${{ inputs.image-tag }}
+      sconify-debug: ${{ inputs.sconify-debug }}
+      sconify-prod: ${{ inputs.sconify-prod }}
+      docker-registry: docker.io
+      sconify-version: 5.9.0-v15
+      fs-dir: /app
+      binary: /usr/local/bin/node
+      command: node /app/src/app.js
+      heap: 1G
       dlopen: 1
     secrets:
       docker-username: ${{ secrets.DOCKER_USERNAME }}
