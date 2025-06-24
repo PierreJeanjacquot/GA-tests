@@ -1,4 +1,4 @@
-name: Sconify
+name: Sconify iApp
 
 on:
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
       scontain-username: ${{ vars.SCONTAIN_USERNAME }}
     secrets:
       docker-password: ${{ secrets.DOCKER_TOKEN }}
-      scontain-password: ${{ secrets.SCONETAIN_TOKEN }}
+      scontain-password: ${{ secrets.SCONTAIN_TOKEN }}
       scone-signing-key: ${{ secrets.SCONE_SIGNING_KEY }}
 
   use-sconify-output:
