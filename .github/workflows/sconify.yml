@@ -31,10 +31,10 @@ jobs:
       command: node /app/src/app.js
       heap: 1G
       dlopen: 1
+      docker-username: ${{ vars.DOCKER_USERNAME }}
+      scontain-username: ${{ vars.SCONTAIN_USERNAME }}
     secrets:
-      docker-username: ${{ secrets.DOCKER_USERNAME }}
       docker-password: ${{ secrets.DOCKER_TOKEN }}
-      scontain-username: ${{ secrets.SCONTAIN_USERNAME }}
       scontain-password: ${{ secrets.SCONETAIN_TOKEN }}
       scone-signing-key: ${{ secrets.SCONE_SIGNING_KEY }}
 
