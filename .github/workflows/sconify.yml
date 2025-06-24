@@ -19,6 +19,9 @@ on:
 jobs:
   sconify:
     uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/sconify.yml@feat/sconify
+    permissions:
+      id-token: write
+      attestations: write
     with:
       image-name: ${{ inputs.image-name }}
       image-tag: ${{ inputs.image-tag }}
