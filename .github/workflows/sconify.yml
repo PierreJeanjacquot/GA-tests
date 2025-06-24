@@ -38,17 +38,10 @@ jobs:
       scontain-password: ${{ secrets.SCONETAIN_TOKEN }}
       scone-signing-key: ${{ secrets.SCONE_SIGNING_KEY }}
 
-  print-out:
+  use-sconify-output:
     runs-on: ubuntu-latest
     needs: sconify
     steps:
-      - env:
-          DEBUG_IMAGE: ${{ needs.sconify.outputs.debug-image }}
-          DEBUG_CHECKSUM: ${{ needs.sconify.outputs.debug-checksum }}
-          DEBUG_MRENCLAVE: ${{ needs.sconify.outputs.debug-mrenclave }}
-          PROD_IMAGE: ${{ needs.sconify.outputs.prod-image }}
-          PROD_CHECKSUM: ${{ needs.sconify.outputs.prod-checksum }}
-          PROD_MRENCLAVE: ${{ needs.sconify.outputs.prod-mrenclave }}
-        run: |
-          echo "DEBUG IMAGE INFO: image=$DEBUG_IMAGE | checksum=$DEBUG_CHECKSUM | mrenclave=$DEBUG_MRENCLAVE"
-          echo "PROD IMAGE INFO: image=$PROD_IMAGE | checksum=$PROD_CHECKSUM | mrenclave=$PROD_MRENCLAVE"
+      - run: |
+          echo "DEBUG IMAGE INFO: image=${{ needs.sconify.outputs.debug-image }} | checksum=${{ needs.sconify.outputs.debug-checksum }} | mrenclave=${{ needs.sconify.outputs.debug-mrenclave }}"
+          echo "PROD IMAGE INFO: image=${{ needs.sconify.outputs.prod-image }} | checksum=${{ needs.sconify.outputs.prod-checksum }} | mrenclave=${{ needs.sconify.outputs.prod-mrenclave }}"
