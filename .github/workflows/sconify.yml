@@ -36,6 +36,7 @@ jobs:
       fs-dir: /app
       heap: 1G
       dlopen: 1
+      mprotect: 1
       docker-username: ${{ vars.DOCKER_USERNAME }}
       scontain-username: ${{ vars.SCONTAIN_USERNAME }}
     secrets:
