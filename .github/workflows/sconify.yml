@@ -18,7 +18,7 @@ on:
 
 jobs:
   sconify:
-    uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/sconify.yml@feat/sconify
+    uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/sconify.yml@sconify-v2
     with:
       # runner: your-runner-here ⚠️ control the runner used in the workflow to match your requirements
       image-name: ${{ inputs.image-name }}
@@ -37,9 +37,9 @@ jobs:
       heap: 1G
       dlopen: 1
       mprotect: 1
-      docker-username: ${{ vars.DOCKER_USERNAME }}
-      scontain-username: ${{ vars.SCONTAIN_USERNAME }}
     secrets:
+      scontain-username: ${{ vars.SCONTAIN_USERNAME }}
+      docker-username: ${{ vars.DOCKER_USERNAME }}
       docker-password: ${{ secrets.DOCKER_TOKEN }}
       scontain-password: ${{ secrets.SCONTAIN_TOKEN }}
       scone-signing-key: ${{ secrets.SCONE_SIGNING_KEY }}
@@ -50,5 +50,5 @@ jobs:
     needs: sconify
     steps:
       - run: |
-          echo "DEBUG IMAGE INFO: image=${{ needs.sconify.outputs.debug-image }} | checksum=${{ needs.sconify.outputs.debug-checksum }} | mrenclave=${{ needs.sconify.outputs.debug-mrenclave }}"
-          echo "PROD IMAGE INFO: image=${{ needs.sconify.outputs.prod-image }} | checksum=${{ needs.sconify.outputs.prod-checksum }} | mrenclave=${{ needs.sconify.outputs.prod-mrenclave }}"
+          echo "DEBUG IMAGE INFO: tag=${{ needs.sconify.outputs.debug-image-tag }} | checksum=${{ needs.sconify.outputs.debug-checksum }} | mrenclave=${{ needs.sconify.outputs.debug-mrenclave }}"
+          echo "PROD IMAGE INFO: tag=${{ needs.sconify.outputs.prod-image-tag }} | checksum=${{ needs.sconify.outputs.prod-checksum }} | mrenclave=${{ needs.sconify.outputs.prod-mrenclave }}"
