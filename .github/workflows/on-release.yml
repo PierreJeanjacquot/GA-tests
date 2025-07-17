@@ -1,0 +1,14 @@
+name: on release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show release info
+        run: |
+          echo "ref ${{ github.ref }}"
+          echo "ref_name ${{ github.ref_name }}"
