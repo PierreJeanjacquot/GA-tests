@@ -1,0 +1,16 @@
+name: check environment
+
+on:
+  workflow_call:
+    inputs:
+      msg:
+        type: string
+        description: "msg to echo"
+        required: true
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo msg
+        run: echo "msg = ${{ inputs.msg }}"
