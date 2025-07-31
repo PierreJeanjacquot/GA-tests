@@ -5,7 +5,7 @@
       "changelog-path": "CHANGELOG.md",
       "include-v-in-tag": true,
       "prerelease": true,
-      "versioning": "default",
+      "versioning": "prerelease",
       "prerelease-type": "alpha",
       "initial-version": "0.1.0-alpha.0"
     }
