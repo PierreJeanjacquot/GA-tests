@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-alpha.1](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.2.0-alpha...v0.2.0-alpha.1) (2025-07-31)
+
+
+### 🐞 Bug Fixes
+
+* BAZ ([445ebdb](https://github.com/PierreJeanjacquot/GA-tests/commit/445ebdbd2c009f5e0139a515459893d5c583bad7))
+
 ## [0.2.0-alpha](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.1.0...v0.2.0-alpha) (2025-07-31)
 
 
