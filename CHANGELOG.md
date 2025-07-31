@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0-alpha.1](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.1.0-alpha.0...v0.1.0-alpha.1) (2025-07-31)
+
+
+### 🚀 Features
+
+* FOO ([a96224d](https://github.com/PierreJeanjacquot/GA-tests/commit/a96224d5e8bb3cfd50f1fa963d3913433163e520))
+
 ## 0.1.0-alpha.0 (2025-07-31)
 
 
