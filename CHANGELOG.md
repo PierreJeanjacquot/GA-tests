@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0-alpha](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.1.0...v0.2.0-alpha) (2025-07-31)
+
+
+### 🚀 Features
+
+* BAR ([8c6d3e7](https://github.com/PierreJeanjacquot/GA-tests/commit/8c6d3e75194b73c2e0875ad2376aa148f913b50b))
+
 ## [0.1.0](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.1.0-alpha.1...v0.1.0) (2025-07-31)
 
 
