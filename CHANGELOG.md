@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.1.0-alpha.1...v0.1.0) (2025-07-31)
+
+
+### ci
+
+* promote latest ([4a69a8d](https://github.com/PierreJeanjacquot/GA-tests/commit/4a69a8da0ca26917ea269936fd59db021525eb79))
+
 ## [0.1.0-alpha.1](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.1.0-alpha.0...v0.1.0-alpha.1) (2025-07-31)
 
 
