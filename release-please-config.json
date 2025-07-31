@@ -1,0 +1,19 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "changelog-path": "CHANGELOG.md",
+      "include-v-in-tag": true,
+      "prerelease": true,
+      "versioning": "default",
+      "prerelease-type": "alpha",
+      "initial-version": "0.1.0-alpha.0"
+    }
+  },
+  "changelog-sections": [
+    { "type": "feat", "section": "🚀 Features", "hidden": false },
+    { "type": "fix", "section": "🐞 Bug Fixes", "hidden": false },
+    { "type": "chore", "section": "🧰 Other", "hidden": false }
+  ],
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
