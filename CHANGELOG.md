@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.2.0...v0.2.1) (2025-08-18)
+
+
+### 🧰 Other
+
+* update sconify ([895042c](https://github.com/PierreJeanjacquot/GA-tests/commit/895042cdda78b0f809058a8a09c3e3d558414c44))
+
 ## [0.2.0](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.2.0-alpha.1...v0.2.0) (2025-07-31)
 
 
