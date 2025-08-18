@@ -18,7 +18,7 @@ on:
 
 jobs:
   sconify:
-    uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/sconify.yml@sconify-v2
+    uses: iExecBlockchainComputing/github-actions-workflows/.github/workflows/sconify.yml@fix/sconify-remove-command-option
     with:
       # runner: your-runner-here ⚠️ control the runner used in the workflow to match your requirements
       image-name: ${{ inputs.image-name }}
@@ -28,7 +28,6 @@ jobs:
       docker-registry: docker.io
       sconify-version: 5.9.0-v15
       binary: /usr/local/bin/node
-      command: node /app/src/app.js
       host-path: |
         /etc/hosts
         /etc/resolv.conf
