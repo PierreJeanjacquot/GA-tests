@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.2.0...v0.3.0) (2026-02-24)
+
+
+### 🚀 Features
+
+* init package foo ([cbab11a](https://github.com/PierreJeanjacquot/GA-tests/commit/cbab11aacdcb42961af33817c9586a870a70057c))
+
+
+### 🧰 Other
+
+* update sconify ([895042c](https://github.com/PierreJeanjacquot/GA-tests/commit/895042cdda78b0f809058a8a09c3e3d558414c44))
+
 ## [0.2.0](https://github.com/PierreJeanjacquot/GA-tests/compare/v0.2.0-alpha.1...v0.2.0) (2025-07-31)
 
 
