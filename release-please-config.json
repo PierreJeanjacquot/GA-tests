@@ -4,8 +4,18 @@
       "release-type": "simple",
       "changelog-path": "CHANGELOG.md",
       "include-v-in-tag": true
+    },
+    "packages/foo": {
+      "release-type": "node",
+      "changelog-path": "CHANGELOG.md",
+      "include-v-in-tag": true,
+      "include-component-in-tag": true,
+      "prerelease": true,
+      "versioning": "prerelease",
+      "prerelease-type": "beta"
     }
   },
+  "separate-pull-requests": true,
   "changelog-sections": [
     { "type": "feat", "section": "🚀 Features", "hidden": false },
     { "type": "fix", "section": "🐞 Bug Fixes", "hidden": false },
