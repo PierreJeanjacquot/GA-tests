@@ -1,0 +1,31 @@
+name: tojson outputs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tojson-outputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set outputs
+        id: step1
+        run: |
+          echo 'list=["foo","bar"]' >> "$GITHUB_OUTPUT"
+          echo "foo=A" >> "$GITHUB_OUTPUT"
+          echo "bar=B" >> "$GITHUB_OUTPUT"
+          echo "baz=C" >> "$GITHUB_OUTPUT"
+
+      - name: read outputs via toJSON
+        env:
+          STEP1_OUTPUTS: ${{ toJSON(steps.step1.outputs) }}
+        run: |
+          echo "raw step1 outputs:"
+          echo "$STEP1_OUTPUTS" | jq .
+
+          list=$(echo "$STEP1_OUTPUTS" | jq -r '.list | fromjson | .[]')
+          for entry in $list; do
+            value=$(echo "$STEP1_OUTPUTS" | jq -r --arg key "$entry" '.[$key]')
+            echo "$entry = $value"
+          done
