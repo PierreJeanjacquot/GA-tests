@@ -1,0 +1,24 @@
+name: mise update
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mise-update
+  cancel-in-progress: false
+
+jobs:
+  mise-update:
+    name: mise update
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Propose mise updates
+        uses: foo-coders/github-actions/actions/mise-update/action.yml@feat/mise-update
+        with:
+          client-id: "foo"
+          private-key: "bar"
